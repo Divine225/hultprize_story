@@ -5,6 +5,7 @@
   --ink-soft: #6B5D4D;
   --clay: #C97B3D;
   --sage: #4F6B4A;
+  --coffee: #3B2A20;
 
   --font-display: "Fraunces", serif;
   --font-body: "Inter", sans-serif;
@@ -36,29 +37,131 @@ body {
   align-items: flex-start;
   padding: 8vh 8vw;
   position: relative;
+  overflow: hidden;
+}
+
+
+.hero__anim-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: var(--coffee);
+}
+
+.hero__particles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero__glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.35;
+}
+
+.hero__glow--1 {
+  width: 300px;
+  height: 300px;
+  background: #F0E6D2;
+  top: 10%;
+  left: 15%;
+  animation: floatSlow 9s ease-in-out infinite;
+}
+
+.hero__glow--2 {
+  width: 220px;
+  height: 220px;
+  background: #C97B3D;
+  bottom: 15%;
+  right: 20%;
+  animation: floatSlow 11s ease-in-out infinite reverse;
+}
+
+.hero__glow--3 {
+  width: 180px;
+  height: 180px;
+  background: #4F6B4A;
+  top: 50%;
+  right: 40%;
+  animation: floatSlow 13s ease-in-out infinite;
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(30px, -40px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__anim-bg,
+  .hero__glow {
+    animation: none;
+  }
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(43, 33, 24, 0.35) 0%,
+    rgba(43, 33, 24, 0.55) 55%,
+    var(--paper) 100%
+  );
+  z-index: 1;
 }
 
 .hero__inner {
+  position: relative;
+  z-index: 2;
   max-width: 720px;
 }
 
-.hero__eyebrow {
-  font-size: 0.85rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--sage);
-  margin-bottom: 1.2rem;
-}
 
 .hero__name {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: clamp(2.6rem, 7vw, 5rem);
-  line-height: 1.1;
-  margin: 0.2rem 0 1.4rem;
-  color: var(--ink);
+  font-size: clamp(2rem, 9vw, 7.5rem);
+  line-height: 1.02;
+  margin: 0.2rem 0 1rem;
+  color: #FFFDF8;
+  white-space: nowrap;
 }
 
+.hero__line {
+  font-size: clamp(1.4rem, 2.8vw, 1.8rem);
+  color: #F0E6D2;
+  font-style: italic;
+  font-family: var(--font-display);
+}
+
+.hero__eyebrow {
+  font-size: 1.05rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #F0E6D2;
+  margin-bottom: 1.4rem;
+}
+
+
+.hero__scroll-hint {
+  position: absolute;
+  bottom: 6vh;
+  left: 8vw;
+  width: 1px;
+  height: 48px;
+  background: #F0E6D2;
+  opacity: 0.6;
+  z-index: 2;
+}
 .accent {
   color: var(--clay);
   font-style: italic;
@@ -99,10 +202,8 @@ body {
 
 /* ===== Sections génériques ===== */
 .section {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 10vh 8vw;
+  min-height: auto;
+  padding: 6vh 8vw;
 }
 
 .section__inner {
@@ -121,12 +222,12 @@ body {
 .section__title {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-size: clamp(2.6rem, 6vw, 4rem);
   margin-bottom: 1.5rem;
 }
 
 .section__text {
-  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+  font-size: clamp(1.15rem, 1.8vw, 1.35rem);
   color: var(--ink-soft);
   max-width: 60ch;
   margin-top: 0.9rem;
@@ -377,4 +478,140 @@ body {
 .modal__bio {
   color: var(--ink-soft);
   line-height: 1.7;
+}
+
+/* ===== Après le Hult Prize ===== */
+.apres-grid {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+@media (max-width: 860px) {
+  .apres-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.apres-col__title {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--clay);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.apres-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.apres-list li {
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+  padding-left: 1.1rem;
+  position: relative;
+}
+
+.apres-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--sage);
+}
+
+/* ===== Cartes photo (Après le Hult Prize) ===== */
+.photo-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.photo-card {
+  background: #FFFDF8;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(43, 33, 24, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.photo-card:hover {
+  transform: translateY(-4px);
+}
+
+.photo-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-card figcaption {
+  padding: 0.8rem 1rem;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+/* ===== Lightbox (agrandissement photo au clic) ===== */
+.photo-card img {
+  cursor: zoom-in;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 200;
+}
+
+.lightbox.is-open {
+  display: flex;
+}
+
+.lightbox__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 15, 10, 0.9);
+}
+
+.lightbox__img {
+  position: relative;
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 8px;
+  z-index: 1;
+  animation: lightboxIn 0.25s ease;
+}
+
+.lightbox__caption {
+  position: relative;
+  z-index: 1;
+  color: var(--paper);
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--paper);
+  font-size: 2.2rem;
+  cursor: pointer;
+  z-index: 2;
+  line-height: 1;
+}
+
+@keyframes lightboxIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }

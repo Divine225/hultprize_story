@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mon Parcours au sein du Hult Prize — Theresa Divine</title>
+<title>My Journey with the Hult Prize — Theresa Tcheme</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
@@ -11,9 +11,14 @@
 <body>
 
 <section class="hero" id="hero">
+  <div class="hero__anim-bg"></div>
+  <canvas id="hero-particles" class="hero__particles"></canvas>
+  <div class="hero__overlay"></div>
+
   <div class="hero__inner">
-    <p class="hero__eyebrow" data-reveal>Une histoire, un parcours</p>
-    <h1 class="hero__name" data-reveal>Mon Parcours au sein du Hult Prize</h1>
+    <p class="hero__eyebrow" data-reveal>Hult Prize</p>
+    <h1 class="hero__name" data-reveal>Theresa Tcheme</h1>
+    <p class="hero__line" data-reveal>My Journey with the Hult Prize</p>
   </div>
   <div class="hero__scroll-hint" data-reveal>
     <span></span>
@@ -23,14 +28,14 @@
 <section class="section" id="qui-je-suis">
   <div class="section__inner">
     <span class="section__number">01</span>
-    <h2 class="section__title" data-reveal>Qui je suis</h2>
+    <h2 class="section__title" data-reveal>Who I Am</h2>
     <p class="section__text" data-reveal>
-      Je m'appelle Theresa Divine. Étudiante en 3<sup>e</sup> année d'informatique
-      à l'Université de Yaoundé I, j'aime la musique, la technologie et tout ce qui touche à l'innovation.
+      My name is Theresa Divine. I'm a 3<sup>rd</sup>-year Computer Science student
+      at the University of Yaoundé I, and I love music, technology, and everything related to innovation.
     </p>
     <p class="section__text" data-reveal>
-      Bénévole dans plusieurs communautés, j'y ai développé mon esprit d'entrepreneuriat —
-      et ces deux dernières années, je le dois au <span class="accent">Hult Prize</span>.
+      A volunteer in several communities, that's where I developed my entrepreneurial spirit —
+      and for the past two years, I owe it to the <span class="accent">Hult Prize</span>.
     </p>
   </div>
 </section>
@@ -38,81 +43,200 @@
 <section class="section" id="mon-histoire">
   <div class="section__inner">
     <span class="section__number">02</span>
-    <h2 class="section__title" data-reveal>Mon passage</h2>
+    <h2 class="section__title" data-reveal>My Path</h2>
 
     <div class="timeline">
       <div class="timeline__item" data-reveal>
-        <span class="timeline__date">Avril 2025</span>
-        <h3 class="timeline__role">Bénévole — Hult Prize (phase nationale)</h3>
+        <span class="timeline__date">April 2025</span>
+        <h3 class="timeline__role">Volunteer — Hult Prize (National Phase)</h3>
         <p class="timeline__text">
-          Mes tout premiers pas au sein du Hult Prize, le point de départ de tout ce qui allait suivre.
+          My very first steps within the Hult Prize, the starting point of everything that followed.
         </p>
       </div>
 
       <div class="timeline__item" data-reveal>
         <span class="timeline__date">2025 — 2026</span>
-        <h3 class="timeline__role">Bénévole — Hult Prize OnCampus, Université de Yaoundé I</h3>
+        <h3 class="timeline__role">Volunteer — Hult Prize OnCampus, University of Yaoundé I</h3>
         <p class="timeline__text">
-          En charge de trouver les sponsors de l'événement sur mon campus. J'ai obtenu
-          <span class="accent">Freemopay</span>, <span class="accent">Hinkaku</span> et
-          <span class="accent">Enovation Factory</span>, entre autres.
+          In charge of finding sponsors for the event on my campus. I secured
+          <span class="accent">Freemopay</span>, <span class="accent">Hinkaku</span>, and
+          <span class="accent">Enovation Factory</span>, among others.
         </p>
       </div>
 
       <div class="timeline__item" data-reveal>
         <span class="timeline__date">2026</span>
-        <h3 class="timeline__role">Bénévole — Hult Prize Cameroun</h3>
+        <h3 class="timeline__role">Volunteer — Hult Prize Cameroon</h3>
         <p class="timeline__text">
-          En charge de tous les Campus Directors du pays : communication, cohésion, bon déroulement
-          de leur parcours pour organiser les événements dans leurs universités. Une équipe de plus
-          de 15 Campus Directors à travers le Cameroun.
+          In charge of all Campus Directors across the country: communication, cohesion, and smooth
+          coordination of their work organizing events at their universities. A team of more than
+          15 Campus Directors across Cameroon.
+        </p>
+      </div>
+
+      <div class="timeline__item" data-reveal>
+        <span class="timeline__date">2026</span>
+        <h3 class="timeline__role">Participant — Hult Prize, with GreenFarmers</h3>
+        <p class="timeline__text">
+          That same year, I also led my own team and my own project,
+          <span class="accent">GreenFarmers</span>, as a participant in the competition.
         </p>
       </div>
     </div>
   </div>
 </section>
 
-
 <section class="section" id="avantages">
   <div class="section__inner section__inner--wide">
     <span class="section__number">03</span>
-    <h2 class="section__title" data-reveal>Ce que ça m'a apporté</h2>
+    <h2 class="section__title" data-reveal>What It Gave Me</h2>
 
     <div class="cards">
       <div class="card" data-reveal>
         <span class="card__icon">01</span>
-        <h3 class="card__title">Des mentors, des grands frères</h3>
+        <h3 class="card__title">Mentors, big brothers</h3>
         <p class="card__text">
-          J'y ai rencontré des mentors au niveau professionnel — mes "grands frères" —
-          qui m'accompagnent encore aujourd'hui.
+          I met professional mentors there — my "big brothers" —
+          who still support me today.
         </p>
       </div>
 
       <div class="card" data-reveal>
         <span class="card__icon">02</span>
-        <h3 class="card__title">L'ouverture vers d'autres communautés</h3>
+        <h3 class="card__title">Access to other communities</h3>
         <p class="card__text">
-          Cette première expérience m'a ouvert les portes d'autres communautés,
-          comme <span class="accent">AWS</span> et <span class="accent">GDG Yaoundé</span>.
+          This first experience opened the doors to other communities for me,
+          like <span class="accent">AWS</span> and <span class="accent">GDG Yaoundé</span>.
         </p>
       </div>
 
       <div class="card" data-reveal>
         <span class="card__icon">03</span>
-        <h3 class="card__title">Travailler sous pression, parler en public</h3>
+        <h3 class="card__title">Working under pressure, public speaking</h3>
         <p class="card__text">
-          Deux compétences que je n'avais pas avant, et que j'ai développées
-          directement sur le terrain, au sein de cette communauté.
+          Two skills I didn't have before, developed directly in the field,
+          within this community.
         </p>
       </div>
 
       <div class="card" data-reveal>
         <span class="card__icon">04</span>
-        <h3 class="card__title">L'esprit d'entrepreneuriat — et GreenFarmers</h3>
+        <h3 class="card__title">An entrepreneurial mindset — and GreenFarmers</h3>
         <p class="card__text">
-          C'est à mon passage au Hult Prize que je dois le développement de mon sens
-          de l'entrepreneuriat, et donc la création de <span class="accent">GreenFarmers</span>.
+          I owe the development of my entrepreneurial mindset to my time at the Hult Prize —
+          and with it, the creation of <span class="accent">GreenFarmers</span>.
         </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="mentors">
+  <div class="section__inner section__inner--wide">
+    <span class="section__number">03bis</span>
+    <h2 class="section__title" data-reveal>My Mentors</h2>
+    <p class="section__text" data-reveal>
+      Big brothers I met through the Hult Prize, who still inspire me today.
+      Click on a photo to learn more about each of them.
+    </p>
+
+    <div class="mentors">
+      <button class="mentor" data-reveal data-mentor="dawne">
+        <img src="assets/images/stephane.jpeg" alt="Danwe Stéphane" class="mentor__photo">
+        <span class="mentor__name">Danwe Stéphane</span>
+      </button>
+
+      <button class="mentor" data-reveal data-mentor="jerry">
+        <img src="assets/images/jerry1.jpeg" alt="Jerry Davis Ndjana Mengue" class="mentor__photo">
+        <span class="mentor__name">Jerry Davis</span>
+      </button>
+
+      <button class="mentor" data-reveal data-mentor="cabrel">
+        <img src="assets/images/cabrel.jpeg" alt="Cabrel Domfang" class="mentor__photo">
+        <span class="mentor__name">Cabrel Domfang</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="apres">
+  <div class="section__inner section__inner--wide">
+    <span class="section__number">04</span>
+    <h2 class="section__title" data-reveal>After the Hult Prize</h2>
+    <p class="section__text" data-reveal>
+      What I learned there didn't stop at the competition — it carried on
+      into everything I did afterward.
+    </p>
+
+    <div class="apres-grid">
+      <div class="apres-col" data-reveal>
+        <h3 class="apres-col__title">Events</h3>
+        <div class="photo-cards">
+          <figure class="photo-card">
+            <img src="assets/images/journee_de_la_securite_informatique.jpeg" alt="Cybersecurity Day">
+            <figcaption>Cybersecurity Day</figcaption>
+          </figure>
+          <figure class="photo-card">
+            <img src="assets/images/afed3.jpeg" alt="AFED">
+            <figcaption>Community Manager — AFED</figcaption>
+          </figure>
+          <figure class="photo-card">
+            <img src="assets/images/juin.jpeg" alt="JUIN">
+            <figcaption>JUIN — University Computer Science Day</figcaption>
+          </figure>
+          <figure class="photo-card">
+            <img src="assets/images/JUIN.jpeg" alt="University Entrepreneurship Week">
+            <figcaption>University Entrepreneurship Week</figcaption>
+          </figure>
+          <figure class="photo-card">
+            <img src="assets/images/RAIDIO.FM.jpeg" alt="Radio FM">
+            <figcaption>Radio FM Feature</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="apres-col" data-reveal>
+        <h3 class="apres-col__title">Competitions</h3>
+        <div class="photo-cards">
+          <figure class="photo-card">
+            <img src="assets/images/getec.jpeg" alt="GETEC">
+            <figcaption>GETEC</figcaption>
+          </figure>
+          <figure class="photo-card">
+            <img src="assets/images/WhatsApp Image 2026-09-06 at 20.24.44.jpeg" alt="DAP">
+            <figcaption>DAP Competition</figcaption>
+          </figure>
+          <figure class="photo-card">
+            <img src="assets/images/cits2.jpeg" alt="CITS'26">
+            <figcaption>CITS'26</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="apres-col" data-reveal>
+        <h3 class="apres-col__title">Events I Organized</h3>
+        <div class="photo-cards">
+          <figure class="photo-card">
+            <img src="assets/images/WhatsApp Image 2026-09-05 at 02.32.33.jpeg" alt="Devfest 2025">
+            <figcaption>Devfest 2025</figcaption>
+          </figure>
+          <figure class="photo-card">
+            <img src="assets/images/WhatsApp Image 2026-09-06 at 20.31.19.jpeg" alt="Daytona Yaoundé">
+            <figcaption>Daytona Yaoundé</figcaption>
+          </figure>
+          <figure class="photo-card">
+            <img src="assets/images/WhatsApp Image 2026-09-06 at 20.34.21.jpeg" alt="Community Day Saint Jean">
+            <figcaption>Community Day Saint Jean</figcaption>
+          </figure>
+          <figure class="photo-card">
+            <img src="assets/images/WhatsApp Image 2026-09-05 at 02.32.30.jpeg" alt="XYBERCLAN Workshop">
+            <figcaption>XYBERCLAN Workshop — Moderator</figcaption>
+          </figure>
+          <figure class="photo-card">
+            <img src="assets/images/aws.jpeg" alt="AWS ICT4D Workshop">
+            <figcaption>AWS × ICT4D Workshops</figcaption>
+          </figure>
+        </div>
       </div>
     </div>
   </div>
@@ -120,104 +244,75 @@
 
 <section class="section" id="defis">
   <div class="section__inner section__inner--wide">
-    <span class="section__number">04</span>
-    <h2 class="section__title" data-reveal>Les problèmes que j'ai surmontés</h2>
+    <span class="section__number">05</span>
+    <h2 class="section__title" data-reveal>Challenges I Overcame</h2>
 
     <div class="cards cards--stack">
       <div class="card card--defi" data-reveal>
-        <h3 class="card__title">Tout à apprendre, dès le départ</h3>
+        <h3 class="card__title">Starting from scratch</h3>
         <p class="card__text">
-          Je ne connaissais rien au design, je savais à peine aligner deux phrases en anglais,
-          et parler devant un public était difficile pour moi. Mais il y a des gens qui m'ont fait confiance.
+          I knew nothing about design, could barely put two English sentences together,
+          and public speaking was hard for me. But some people trusted me anyway.
         </p>
         <p class="card__text card__text--outcome">
-          → Cette confiance m'a poussée à apprendre vite, sur le terrain.
+          → That trust pushed me to learn fast, on the ground.
         </p>
       </div>
 
       <div class="card card--defi" data-reveal>
-        <h3 class="card__title">Un dossier Sheets supprimé par erreur</h3>
+        <h3 class="card__title">A deleted Sheets folder</h3>
         <p class="card__text">
-          Étant nouvelle sur Google Sheets, j'ai un jour supprimé tout un dossier contenant
-          les données d'organisation du Hult Prize.
+          Being new to Google Sheets, I once deleted an entire folder containing
+          the Hult Prize's organizational data.
         </p>
         <p class="card__text card__text--outcome">
-          → Grâce à cet incident, j'ai appris de nouvelles notions que je ne maîtrisais pas encore.
+          → That mistake taught me new skills I hadn't mastered yet.
         </p>
       </div>
 
       <div class="card card--defi" data-reveal>
-        <h3 class="card__title">La tentation d'abandonner</h3>
+        <h3 class="card__title">The temptation to quit</h3>
         <p class="card__text">
-          Cette année, à un moment, la pression était tellement grande que j'ai voulu tout abandonner.
+          This year, at one point, the pressure was so intense I wanted to give up completely.
         </p>
         <p class="card__text card__text--outcome">
-          → J'ai surmonté ça en apprenant à planifier mes journées, avec l'aide de <span class="accent">Notion</span>.
+          → I overcame it by learning to plan my days, with the help of <span class="accent">Notion</span>.
         </p>
       </div>
     </div>
   </div>
 </section>
-
 
 <section class="section section--closing" id="aujourdhui">
   <div class="section__inner">
-    <span class="section__number">05</span>
-    <h2 class="section__title" data-reveal>Qui je suis aujourd'hui</h2>
+    <span class="section__number">06</span>
+    <h2 class="section__title" data-reveal>Who I Am Today</h2>
 
     <p class="section__text" data-reveal>
-      Je suis passée d'une petite fille agitée et maladroite à quelqu'un qui met son énergie
-      au service des autres, tout en sachant exactement ce qu'elle veut dans la vie.
+      I went from being a restless, clumsy little girl to someone who puts her energy
+      to work for others, while knowing exactly what she wants in life.
     </p>
 
     <p class="section__text" data-reveal>
-      Aujourd'hui, je suis co-fondatrice de <span class="accent">GreenFarmers</span>, une entreprise
-      d'agri-tech, et de <span class="accent">XYBERCLAN</span>, une startup de services numériques.
-      Je suis aussi Deputy Head de la Digital Solutions Unit à <span class="accent">Human Resources Volunteer</span>,
-      et je reste active dans plusieurs communautés — GDG Yaoundé, AWS Community Cameroon,
-      et bien sûr le Hult Prize Cameroun.
+      Today, I'm co-founder of <span class="accent">GreenFarmers</span>, an agri-tech company,
+      and of <span class="accent">XYBERCLAN</span>, a digital services startup.
+      I'm also Deputy Head of the Digital Solutions Unit at <span class="accent">Human Resources Volunteer</span>,
+      and I remain active in several communities — GDG Yaoundé, AWS Community Cameroon,
+      and of course Hult Prize Cameroon.
     </p>
 
     <p class="section__text section__text--vision" data-reveal>
-      Ma vision, sur le long terme : allier entrepreneuriat technologique et diplomatie,
-      pour faire de l'Afrique un acteur central de l'innovation mondiale.
+      My long-term vision: combining tech entrepreneurship with diplomacy,
+      to position Africa as a central player in global innovation.
     </p>
 
     <p class="section__closing-line" data-reveal>
-      Et tout ça, je le dois en grande partie à mon passage au Hult Prize.
+      And I owe most of that to my time at the Hult Prize.
     </p>
   </div>
 </section>
 
-<section class="section" id="mentors">
-  <div class="section__inner section__inner--wide">
-    <span class="section__number">03bis</span>
-    <h2 class="section__title" data-reveal>Mes mentors</h2>
-    <p class="section__text" data-reveal>
-      Des grands frères rencontrés grâce au Hult Prize, qui continuent de m'inspirer aujourd'hui.
-      Clique sur une photo pour en savoir plus sur chacun d'eux.
-    </p>
-
-    <div class="mentors">
-      <button class="mentor" data-reveal data-mentor="dawne">
-        <img src="assets/images/dawne.jpg" alt="Danwe Stéphane" class="mentor__photo">
-        <span class="mentor__name">Danwe Stéphane</span>
-      </button>
-
-      <button class="mentor" data-reveal data-mentor="jerry">
-        <img src="assets/images/jerry.jpg" alt="Jerry Davis Ndjana Mengue" class="mentor__photo">
-        <span class="mentor__name">Jerry Davis</span>
-      </button>
-
-      <button class="mentor" data-reveal data-mentor="cabrel">
-        <img src="assets/images/cabrel.jpg" alt="Cabrel Domfang" class="mentor__photo">
-        <span class="mentor__name">Cabrel Domfang</span>
-      </button>
-    </div>
-  </div>
-</section>
-
-<!-- Modal mentor : une seule structure, réutilisée pour les 3 -->
+<!-- Mentor modal: single structure, reused for all 3 -->
 <div class="modal" id="mentor-modal">
   <div class="modal__backdrop" data-close></div>
   <div class="modal__panel">
@@ -226,6 +321,14 @@
     <h3 class="modal__name" id="modal-name"></h3>
     <p class="modal__bio" id="modal-bio"></p>
   </div>
+</div>
+
+<!-- Lightbox: enlarge any photo-card on click -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox__backdrop" data-close-lightbox></div>
+  <button class="lightbox__close" data-close-lightbox>&times;</button>
+  <img class="lightbox__img" id="lightbox-img" src="" alt="">
+  <p class="lightbox__caption" id="lightbox-caption"></p>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
